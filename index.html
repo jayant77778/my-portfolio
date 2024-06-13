@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayant Bhati Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <img src="banner.jpeg" alt="Banner">
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="content">
+            <img src="jayant.jpg" alt="Jayant Bhati" class="profile-pic">
+            <p>Hi there 👋, I'm Jayant Bhati</p>
+            <p>Welcome to my Profile! I'm a third-year undergraduate actively pursuing a DevOps career, combining a passion for problem-solving with a dedication to learning.</p>
+            <ul>
+                <li>🌱 I’m currently learning advanced DevOps techniques and tools.</li>
+                <li>👯 I’m looking to collaborate on DevOps projects and automation strategies.</li>
+                <li>🤔 I’m looking for help with expanding my knowledge in cloud computing and advanced system administration.</li>
+                <li>💬 Ask me about DevOps, system administration, and efficient automation strategies.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Internship Experience</h2>
+        <ul>
+            <li><strong>Celebal Technologies:</strong> Worked in the DevOps field, gaining practical experience in infrastructure automation and deployment pipelines.</li>
+            <li><strong>Interpe Company:</strong> Internship focused on web development, contributing to frontend and backend projects using modern web technologies.</li>
+            <li><strong>Codsoft:</strong> Internship in Java programming, involved in developing and maintaining software solutions.</li>
+            <li><strong>CodeClause:</strong> Internship in Python programming, focused on building automation scripts and data analysis tools.</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>To-Do List</li>
+            <li>E-commerce Website Frontend</li>
+            <li>Simple Calculator</li>
+            <li>Number Guessing Game</li>
+            <li>Student Report Card Generator</li>
+            <li>URL Shortener</li>
+        </ul>
+        <p>Check out my <a href="https://github.com/jayant77778">GitHub repositories</a> for a detailed view of my projects.</p>
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>🏆 RED HAT CERTIFIED SYSTEM ADMINISTRATOR</li>
+            <li>Completed RS-CIT (Rajasthan State Certificate course in Information Technology)</li>
+            <li>Certified in Computer Graphics by NPTEL</li>
+            <li>Certified in Android Development by Internshala</li>
+            <li>Certified in Job Training and Soft Skills by Internshala</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>📧 Email: <a href="mailto:jai77bhati@gmail.com">jai77bhati@gmail.com</a></p>
+        <p>🔗 <a href="https://www.linkedin.com/in/jayant-bhati-263206259">LinkedIn</a></p>
+    </section>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop - document.querySelector('nav').offsetHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            window.addEventListener('scroll', function() {
+                const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.style.display = 'block';
+                } else {
+                    scrollToTopBtn.style.display = 'none';
+                }
+            });
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
